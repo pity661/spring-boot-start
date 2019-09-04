@@ -1,0 +1,5 @@
+demo:
+  prop:
+    name: wenky
+    real_name: huwenqi
+    nickname_group: ${demo.prop.name}-${demo.prop.real_name}

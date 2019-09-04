@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <property name="loggingLevel" value="INFO"/>
+<!--    <property name="loggingRoot" value="${PWD}"/>-->
+
+    <!--<springProperty scope="context" name="loggingLevel" source="app.config.log.level"/>-->
+    <springProperty scope="context" name="loggingRoot" source="logging.path"/>
+
+    <!-- [公共Appender] 控制台STDOUT -->
+    <appender name="STDOUT-APPENDER" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder charset="UTF-8">
+            <!--%d日期格式；%p输出日志的优先级；%c所属类的全名；%l输出日志发生的位置，线程，代码行数；%m程序输出的信息；%n换行 -->
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %-5p [%t] %c:%L - %m%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="bizLog"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>${loggingRoot}/bizLog.log</File>
+        <encoder charset="UTF-8">
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %-5p [%t] %-17c{2}:%L - %m%n
+            </pattern>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!--yyyy-MM-dd每天分割一次 yyyy-MM-dd_HH-mm每分钟-->
+            <fileNamePattern>${loggingRoot}/bizLog.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <!--最多保留30天-->
+            <maxHistory>30</maxHistory>
+            <!--若开启文件大小配置需要加%i-->
+            <!--<timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">-->
+            <!--<maxFileSize>512MB</maxFileSize>-->
+            <!--</timeBasedFileNamingAndTriggeringPolicy>-->
+        </rollingPolicy>
+        <!-- 只打印INFO日志 -->
+        <!--
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>INFO</level>
+        </filter>
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>INFO</level>
+        </filter>
+        -->
+    </appender>
+
+    <!--打印日志会先进到这个拦截器,additivity设置为false就不会到下一级root中-->
+    <logger name="com.example.demo" additivity="false"  level="INFO">
+        <appender-ref ref="bizLog"/>
+        <appender-ref ref="STDOUT-APPENDER"/>
+    </logger>
+
+    <!--<logger name="com.panda.sdk" additivity="false"  level="INFO">-->
+        <!--<appender-ref ref="bizLog"/>-->
+        <!--<appender-ref ref="STDOUT-APPENDER"/>-->
+    <!--</logger>-->
+
+    <root level="${loggingLevel}">
+        <appender-ref ref="bizLog" />
+        <appender-ref ref="STDOUT-APPENDER" />
+    </root>
+
+</configuration>
