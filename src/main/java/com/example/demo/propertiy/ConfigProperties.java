@@ -1,5 +1,7 @@
-package com.example.demo.properties;
+package com.example.demo.propertiy;
 
+import java.util.List;
+import java.util.Map;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 /**
@@ -14,6 +16,24 @@ public class ConfigProperties {
   private String name;
   private String realName;
   private String nicknameGroup;
+  private List<String> list;
+  private Map<String, Integer> map;
+
+  public Map<String, Integer> getMap() {
+    return map;
+  }
+
+  public void setMap(Map<String, Integer> map) {
+    this.map = map;
+  }
+
+  public List<String> getList() {
+    return list;
+  }
+
+  public void setList(List<String> list) {
+    this.list = list;
+  }
 
   public String getNicknameGroup() {
     return nicknameGroup;

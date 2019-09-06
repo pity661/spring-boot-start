@@ -1,0 +1,30 @@
+# 多数据源数据库配置 @EnableJpaRepositories注解只需要在配置类中使用，不能在启动类中使用
+demo:
+  datasource:
+    mysql:
+      url: jdbc:mysql://127.0.0.1:3306/test?zeroDateTimeBehavior=convertToNull&characterEncoding=UTF-8
+      username: root
+      password:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      jpa:
+        properties:
+          hibernate:
+            dialect: org.hibernate.dialect.MySQL5Dialect
+            show-sql: true
+            hbm2ddl.auto: update
+            database: mysql
+
+    postgre:
+      url: jdbc:postgresql://127.0.0.1:5432/panda_main?tcpKeepAlive=true&autoReconnect=true&PGTZ=8
+      username: postgres
+      password: password
+      driver-class-name: org.postgresql.Driver
+      jpa:
+        properties:
+          hibernate:
+            database: postgresql
+            dialect: org.hibernate.dialect.PostgreSQLDialect
+            show-sql: true
+            hbm2ddl.auto: update
+            temp:
+              use_jdbc_metadata_defaults: false

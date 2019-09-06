@@ -4,6 +4,8 @@
 #####
 
 spring:
+  main:
+    allow-bean-definition-overriding: true
   application:
     name: demo
   redis:
@@ -12,7 +14,7 @@ spring:
 # java -jar xxx.jar --spring.profiles.active={profile} 切换不同的环境配置
   profiles:
     active: dev
-    include: prop
+    include: prop-test,data-plural #,data
 
 # 项目启动时可以通过命令行参数改变端口的值
 # java -jar xxx.jar --server.port=8081

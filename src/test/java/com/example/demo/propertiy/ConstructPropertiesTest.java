@@ -1,6 +1,4 @@
-package com.example.demo.properties;
-
-import static org.junit.Assert.*;
+package com.example.demo.propertiy;
 
 import com.example.demo.BaseTest;
 import org.junit.Test;
