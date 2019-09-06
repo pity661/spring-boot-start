@@ -1,0 +1,16 @@
+demo:
+  prop:
+    name: wenky1
+    real_name: huwenqi
+    # list配置参数注入
+    list[0]: aa
+    list[1]: bb
+    # map配置参数注入
+    map:
+      key1: 1
+      key2: 2
+    nickname_group: ${demo.prop.name}-${demo.prop.real_name}
+    map_value: '{
+      "key1.22": "value1",
+      key2: "value2"
+    }'

@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://127.0.0.1:5432/panda_main?tcpKeepAlive=true&autoReconnect=true&PGTZ=8
+    username: postgres
+    password: password
+    driver-class-name: org.postgresql.Driver
+    # 建表
+    # schema:
+    # 初始化数据
+    # data:
+  jpa:
+    show-sql: true
+    database: postgresql
+    # 根据实体创建表，数据库引擎
+#    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      # update 仅更新，如果表中有数据不会丢失
+      # create 若存在先drop再创建，表中数据会丢失
+      # create-drop 先创建代码执行完后drop
+      # none 不执行任何操作 默认
+      # validate 检查，不对数据库做任何改动 代码中存在数据库不存在会报错，反之不会
+      ddl-auto: create
+
+    properties:
+      hibernate.temp.use_jdbc_metadata_defaults: false
+      hibernate.dialect: org.hibernate.dialect.PostgreSQLDialect

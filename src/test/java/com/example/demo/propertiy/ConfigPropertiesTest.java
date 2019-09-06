@@ -1,6 +1,4 @@
-package com.example.demo.properties;
-
-import static org.junit.Assert.*;
+package com.example.demo.propertiy;
 
 import com.example.demo.BaseTest;
 import org.junit.Test;
@@ -18,6 +16,8 @@ public class ConfigPropertiesTest extends BaseTest {
     logger.info(configProperties.getName());
     logger.info(configProperties.getRealName());
     logger.info(configProperties.getNicknameGroup());
+    logger.info(configProperties.getList().toString());
+    logger.info(configProperties.getMap().toString());
     logger.info(configProperties.toString());
   }
 }
