@@ -4,8 +4,10 @@ import com.example.demo.propertiy.ConfigProperties;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import org.springframework.cache.annotation.EnableCaching;
 
 @SpringBootApplication
+@EnableCaching
 // xxx config-2
 @EnableConfigurationProperties({ConfigProperties.class})
 public class DemoApplication {
