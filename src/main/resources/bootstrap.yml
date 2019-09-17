@@ -1,3 +1,4 @@
+# 需要添加spring-cloud的依赖改配置文件才会生效
 spring:
   jackson:
     property-naming-strategy: CAMEL_CASE_TO_LOWER_CASE_WITH_UNDERSCORES
