@@ -21,6 +21,7 @@ build/
 *.ipr
 out/
 *.log
+.DS_Store
 
 ### NetBeans ###
 /nbproject/private/
