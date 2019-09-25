@@ -3,6 +3,7 @@ package com.example.demo.domain.thread.reentrantLock;
 import com.example.demo.domain.thread.synchronize.Method;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.ReentrantLock;
 import org.slf4j.Logger;
@@ -26,12 +27,14 @@ public class MultiProduct {
     @Override
     public void run() {
       try {
-        lock.lock();
-        if (set.size() < 10) {
+        logger.info(Thread.currentThread().getName() + " 尝试拿锁");
+        lock.tryLock(5, TimeUnit.SECONDS);
+        logger.info(Thread.currentThread().getName() + " 拿到锁了");
+        if (set.size() < 5) {
           set.add(++i);
           logger.info(Thread.currentThread().getName() + " " + set.size());
         }
-        customer.signalAll();
+        Thread.sleep(200);
       } catch (Exception e) {
         e.printStackTrace();
       } finally {
@@ -44,12 +47,14 @@ public class MultiProduct {
     @Override
     public void run() {
       try {
-        lock.lock();
+        logger.info(Thread.currentThread().getName() + " 尝试拿锁");
+        lock.tryLock(5, TimeUnit.SECONDS);
+        logger.info(Thread.currentThread().getName() + " 拿到锁了");
         if (set.size() > 0) {
           set.remove(set.stream().findFirst().get());
           logger.info(Thread.currentThread().getName() + " " + set.size());
         }
-        produce.signalAll();
+        Thread.sleep(200);
       } catch (Exception e) {
         e.printStackTrace();
       } finally {

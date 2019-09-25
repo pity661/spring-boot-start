@@ -10,13 +10,20 @@ public class MultiProductTest {
 
   /** 很多个线程同时参与工作 */
   @Test
-  public void baseTest() {
+  public void baseTest() throws InterruptedException {
     ExecutorService service = Executors.newCachedThreadPool();
     MultiProduct product = new MultiProduct();
     while (true) {
       service.execute(product.new Produce());
       service.execute(product.new Produce());
+      service.execute(product.new Produce());
+      service.execute(product.new Produce());
+      service.execute(product.new Produce());
+      service.execute(product.new Produce());
       service.execute(product.new Customer());
+      service.execute(product.new Customer());
+      service.execute(product.new Customer());
+      Thread.sleep(2000);
     }
   }
 }

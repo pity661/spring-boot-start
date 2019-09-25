@@ -1,6 +1,5 @@
 package com.example.demo.domain.thread.reentrantLock;
 
-import com.example.demo.domain.thread.synchronize.Method;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
@@ -16,7 +15,7 @@ import org.slf4j.LoggerFactory;
  * @create: 2019-09-18 15:45
  */
 public class SingleProduct {
-  private static Logger logger = LoggerFactory.getLogger(Method.class);
+  private static Logger logger = LoggerFactory.getLogger(SingleProduct.class);
   private ReentrantLock lock = new ReentrantLock();
   private Condition produce = lock.newCondition();
   private Condition customer = lock.newCondition();
@@ -34,6 +33,7 @@ public class SingleProduct {
             logger.info(Thread.currentThread().getName() + " " + set.size());
             continue;
           }
+          // 挂起当前线程，释放占用锁
           produce.awaitNanos(1000);
           customer.signal();
         } catch (Exception e) {
