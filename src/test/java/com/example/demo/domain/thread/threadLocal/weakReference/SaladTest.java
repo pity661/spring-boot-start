@@ -15,6 +15,7 @@ public class SaladTest {
 
   @Test
   public void mainTest() throws InterruptedException {
+
     Salad salad = new Salad(new Apple("红富士"));
     logger.info("Apple: " + salad.get());
     System.gc();
