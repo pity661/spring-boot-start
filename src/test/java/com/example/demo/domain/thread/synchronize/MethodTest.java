@@ -10,6 +10,8 @@ public class MethodTest {
   /**
    * 实例方法测试： 1.不同实例同时执行同一个同步方法 2.同一个实例执行同一个同步方法
    *
+   * <p>结果： 不同实例执行同一个同步方法不会阻塞。 同一个示例执行同一个同步方法会被阻塞，顺序执行
+   *
    * @throws InterruptedException
    */
   @Test
@@ -18,15 +20,18 @@ public class MethodTest {
     Customer1 customer = new Customer1(new Method());
     Customer1 customer1 = new Customer1(new Method());
     service.execute(customer);
+    service.execute(customer);
     service.execute(customer1);
     // 防止主线程先退出了
-    Thread.sleep(5000);
+    Thread.sleep(10000);
     // 退出Executor
     service.shutdown();
   }
 
   /**
    * 实例方法测试，方法内同步代码块
+   *
+   * <p>结果：示例同步方法不同对象执行不会阻塞
    *
    * @throws InterruptedException
    */

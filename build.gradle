@@ -39,6 +39,8 @@ dependencies {
     compile 'org.postgresql:postgresql'
     compile 'mysql:mysql-connector-java'
 
+    compile 'com.amazonaws:aws-java-sdk-dynamodb'
+
     // tools
     implementation 'org.apache.commons:commons-lang3:3.5'
     implementation 'com.google.code.gson:gson:+'
@@ -46,4 +48,10 @@ dependencies {
     compile group: 'io.netty', name: 'netty-all', version: '4.1.41.Final'
     // xxx config-4
     annotationProcessor "org.springframework.boot:spring-boot-configuration-processor"
+}
+
+dependencyManagement {
+    imports {
+        mavenBom 'com.amazonaws:aws-java-sdk-bom:1.+'
+    }
 }
