@@ -40,6 +40,7 @@ public class FileUtil {
       while ((str = bufferedReader.readLine()) != null) {
         list.add(str);
       }
+      fileReader.close();
     } catch (FileNotFoundException e) {
       e.printStackTrace();
     } catch (IOException e) {
@@ -63,6 +64,7 @@ public class FileUtil {
             }
           });
       bufferedWriter.flush(); // 把缓冲区内容压入文件
+      fileWriter.close();
     } catch (IOException e) {
       e.printStackTrace();
     }
