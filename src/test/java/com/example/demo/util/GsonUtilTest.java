@@ -3,6 +3,8 @@ package com.example.demo.util;
 import static org.junit.Assert.*;
 
 import com.example.demo.domain.gson.GsonParam;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 import java.util.ArrayList;
 import java.util.List;
@@ -52,5 +54,14 @@ public class GsonUtilTest {
     TypeToken type = new TypeToken<List<GsonParam>>() {};
     paramList = (List<GsonParam>) GsonUtil.str2Class(jsonString, type);
     logger.info(paramList.stream().findFirst().toString());
+  }
+
+  @Test
+  public void translateTest1() {
+    GsonParam param = new GsonParam();
+    param.setName("'ssqsq%1w1=");
+    System.out.println(GsonUtil.toGsonString(param));
+    Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSSSXXX").create();
+    System.out.println(gson.toJson(param));
   }
 }

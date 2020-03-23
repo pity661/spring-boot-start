@@ -24,3 +24,5 @@ spring:
     properties:
       hibernate.temp.use_jdbc_metadata_defaults: false
       hibernate.dialect: org.hibernate.dialect.PostgreSQLDialect
+
+# 若使用该配置文件。单数据库源，需注释掉config.ds下配置文件

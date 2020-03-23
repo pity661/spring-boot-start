@@ -39,7 +39,7 @@ public class MysqlConfig {
 
   @Bean(name = MYSQL_JPA_PROPS)
   @Primary
-  @ConfigurationProperties(MYSQL_JPA_PROPS)
+  @ConfigurationProperties(prefix = MYSQL_JPA_PROPS)
   public JpaProperties mysqlJpaProperties() {
     return new JpaProperties();
   }

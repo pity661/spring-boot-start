@@ -37,14 +37,16 @@ public class PostgreConfig {
   public static final String POSTGRE_ENTITY_MANAGER_FACTORY = "POSTGRE_ENTITY_MANAGER_FACTORY";
   public static final String POSTGRE_PLATFORM_TX_MANAGER = "POSTGRE_PLATFORM_TX_MANAGER";
 
+  // 如果使用单个数据源，需要在此加 @Primary
   @Bean(name = POSTGRE_JPA_PROPS)
-  @ConfigurationProperties(POSTGRE_JPA_PROPS)
+  @ConfigurationProperties(prefix = POSTGRE_JPA_PROPS)
   public JpaProperties postgreJpaProperties() {
     JpaProperties jpaProperties = new JpaProperties();
     jpaProperties.setDatabase(Database.MYSQL);
     return jpaProperties;
   }
 
+  // 如果使用单个数据源，需要在此加 @Primary
   @Bean
   @ConfigurationProperties(prefix = POSTGRE_DATASOURCE)
   public DataSourceProperties postgreDataSourceProperties() {

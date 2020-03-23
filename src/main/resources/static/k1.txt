@@ -1,0 +1,72 @@
+Dữ liệu cơ bản
+Bảo trì tỉnh, thành thị
+Từ điển dữ liệu
+Cấu hình loại hình ảnh
+Cấu hình SMS
+Sắp xếp quyền hạn
+Quản lý bộ phận
+Quản lý vai trò
+Quản lý nhân sự
+Quyền hạn menu
+Quản lý nền tảng
+Quản lý công ty
+Quản lý thực đơn
+Quản lý tài nguyên
+Công ty ủy quyền thực đơn
+Kiểm tra tổng hợp
+Kiểm tra tài liệu tổng hợp
+Liên hệ nhà cung cấp điều tra
+Kiểm tra người liên hệ danh bạ
+Tổ trưởng truy thu kiểm tra dữ liệu tổng hợp
+Tổ viên truy thu kiểm tra dữ liệu tổng hợp
+Phân bổ đơn
+Phân bổ trường hợp hàng loạt
+Trường hợp chưa được phân bổ
+Trường hợp được phân công
+Phân bổ trường hợp hàng loạt - tổ trưởng
+Trường hợp chưa được phân bổ - tổ trưởng
+Đơn đã được chia - Tổ trường
+Quản lý truy thu
+Chờ thẩm định
+Danh sách điều phối
+Chờ phân phối
+chờ xử lý
+Đã xử lý
+Đã thanh toán
+Bảng thống kê nhiệm vụ
+Phê duyệt thanh toán công
+Danh sách kiểm tra lại trường hợp miễn giảm
+Danh sách phê duyệt miễn giảm
+Tổng báo cáo đơn M+
+Tổng báo cáo đơn M1
+Đơn ngừng truy thu
+Danh sách thầu có thể thu hồi
+Đơn ngoại tuyến
+Điều tra trả nợ công
+Danh sách miễn giảm đã xử lý
+Quản lý truy thu ngoại tuyến
+Danh sách truy thu ngoại tuyến chờ phân phối
+Danh sách truy thu ngoại tuyến điều chỉnh
+Kiểm tra tổng hợp truy thu ngoại tuyến
+Bảng thống kê trả nợ truy thu ngoại tuyến
+Sửa chữa thông tin
+Kiểm tra sửa chữa tổng hợp
+Danh sách sửa chữa điều phối
+Danh sách sửa chữa chờ điều phối
+Báo cáo thống kê sửa chữa thông tin
+Quản lý lừa đảo
+Danh sách phân bổ gian lận
+Danh sách phê duyệt gian lận
+Gian lận được chỉ định danh sách
+Quản lý thầu
+Chờ xét duyệt lại thầu
+Chờ phân phối thầu
+Xử lý thầu
+Chờ giải đơn thầu
+Đơn thầu chờ nhận
+Quản lý tố tụng
+Danh sách quản lý tố tụng
+Quản lý sau vay
+Bảng báo cáo nền tảng truy thu (bảng thống kê dữ liệu truy thu)
+Quản lý sau vay
+Phân bổ tỷ lệ thu

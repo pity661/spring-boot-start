@@ -1,8 +1,10 @@
 package com.example.demo.util;
 
 import java.io.*;
+import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Stream;
 
 /**
  * @program: demo
@@ -11,6 +13,18 @@ import java.util.List;
  * @create: 2019-11-12 14:19
  */
 public class FileUtil {
+
+  public void readAllBytes() throws IOException {
+    File file = new File("fileName");
+    String content = new String(Files.readAllBytes(file.toPath()));
+
+    List<String> lines = Files.readAllLines(file.toPath());
+
+    try (Stream<String> lineStream = Files.lines(file.toPath())) {
+      // xxx 惰性读取文件
+    }
+  }
+
   public static void replaceText() {
     List<String> s1 = fileRead("/Users/huwenqi/Desktop/s1.txt");
     List<String> k1 = fileRead("/Users/huwenqi/Desktop/k1.txt");
@@ -21,9 +35,14 @@ public class FileUtil {
     fileOut(base, "/Users/huwenqi/Desktop/final.txt");
   }
 
+  //  public static void main(String[] args) {
+  //    //
+  //    replaceText();
+  //  }
   public static void main(String[] args) {
-    //
-    replaceText();
+    for (int i = 1; i < 2; ++i) {
+      System.out.println(i);
+    }
   }
 
   public static List<String> fileRead(String fileName) {

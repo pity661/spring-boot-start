@@ -20,8 +20,6 @@ task runFormat(type: JavaExec) {
     args sourceSets.test.allJava.files
 }
 
-
-
 repositories {
     mavenCentral()
 }
