@@ -7,13 +7,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 public class UserTest extends BaseTest {
 
-    @Autowired
-    private UserRepository userRepository;
+  @Autowired private UserRepository userRepository;
 
-    @Test
-    public void saveTest() {
-        User user = new User();
-        user.setAge(1);
-        userRepository.save(user);
-    }
+  @Test
+  public void saveTest() {
+    User user = new User();
+    user.setAge(1);
+    userRepository.save(user);
+  }
 }

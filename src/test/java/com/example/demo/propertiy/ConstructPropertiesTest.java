@@ -7,13 +7,12 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
 public class ConstructPropertiesTest extends BaseTest {
-    private Logger logger = LoggerFactory.getLogger(this.getClass());
-    @Autowired
-    private ConstructProperties constructProperties;
+  private Logger logger = LoggerFactory.getLogger(this.getClass());
+  @Autowired private ConstructProperties constructProperties;
 
-    @Test
-    public void test() {
-        logger.info(constructProperties.getName());
-        logger.info(constructProperties.getRealName());
-    }
+  @Test
+  public void test() {
+    logger.info(constructProperties.getName());
+    logger.info(constructProperties.getRealName());
+  }
 }

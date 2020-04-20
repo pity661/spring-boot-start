@@ -12,17 +12,17 @@ import org.springframework.stereotype.Component;
 @Component
 public class DemoProperties {
 
-    @Value("${demo.prop.name}")
-    private String name;
+  @Value("${demo.prop.name}")
+  private String name;
 
-    @Value("${demo.prop.real_name}")
-    private String realName;
+  @Value("${demo.prop.real_name}")
+  private String realName;
 
-    public String getName() {
-        return name;
-    }
+  public String getName() {
+    return name;
+  }
 
-    public String getRealName() {
-        return realName;
-    }
+  public String getRealName() {
+    return realName;
+  }
 }

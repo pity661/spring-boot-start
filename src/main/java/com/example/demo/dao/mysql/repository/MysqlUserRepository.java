@@ -11,5 +11,4 @@ import org.springframework.stereotype.Repository;
  * @create: 2019-09-06 12:02
  */
 @Repository
-public interface MysqlUserRepository extends JpaRepository<User, Long> {
-}
+public interface MysqlUserRepository extends JpaRepository<User, Long> {}

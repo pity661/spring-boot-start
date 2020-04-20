@@ -8,23 +8,22 @@ package com.example.demo.domain.thread.synchronize;
  */
 public class Customer1 implements Runnable {
 
-    Method method;
+  Method method;
 
-    public Customer1(Method method) {
-        this.method = method;
-    }
+  public Customer1(Method method) {
+    this.method = method;
+  }
 
-    private Customer1() {
-    }
+  private Customer1() {}
 
-    @Override
-    public void run() {
-        try {
-            // 同步实例对象
-            this.method.add();
-            this.method.add();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+  @Override
+  public void run() {
+    try {
+      // 同步实例对象
+      this.method.add();
+      this.method.add();
+    } catch (InterruptedException e) {
+      e.printStackTrace();
     }
+  }
 }

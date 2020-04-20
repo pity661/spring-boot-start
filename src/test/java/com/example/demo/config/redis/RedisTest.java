@@ -9,11 +9,10 @@ import org.springframework.data.redis.core.StringRedisTemplate;
 
 public class RedisTest extends BaseTest {
 
-    @Autowired
-    private StringRedisTemplate redisTemplate;
+  @Autowired private StringRedisTemplate redisTemplate;
 
-    @Test
-    public void test() {
-        redisTemplate.opsForValue().set("name", "wenky");
-    }
+  @Test
+  public void test() {
+    redisTemplate.opsForValue().set("name", "wenky");
+  }
 }

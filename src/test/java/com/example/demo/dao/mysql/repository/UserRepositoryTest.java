@@ -4,5 +4,4 @@ import static org.junit.Assert.*;
 
 import com.example.demo.BaseTest;
 
-public class UserRepositoryTest extends BaseTest {
-}
+public class UserRepositoryTest extends BaseTest {}

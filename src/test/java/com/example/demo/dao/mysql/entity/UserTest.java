@@ -8,13 +8,12 @@ import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
 public class UserTest extends BaseTest {
-    @Autowired
-    private MysqlUserRepository userRepository;
+  @Autowired private MysqlUserRepository userRepository;
 
-    @Test
-    public void saveTest() {
-        User user = new User();
-        user.setAge(1);
-        userRepository.save(user);
-    }
+  @Test
+  public void saveTest() {
+    User user = new User();
+    user.setAge(1);
+    userRepository.save(user);
+  }
 }

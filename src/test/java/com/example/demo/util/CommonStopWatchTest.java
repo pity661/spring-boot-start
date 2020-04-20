@@ -13,13 +13,13 @@ import org.slf4j.LoggerFactory;
  */
 public class CommonStopWatchTest {
 
-    private Logger logger = LoggerFactory.getLogger(this.getClass());
+  private Logger logger = LoggerFactory.getLogger(this.getClass());
 
-    @Test
-    public void baseTest() throws InterruptedException {
-        StopWatch stopWatch = StopWatch.createStarted();
-        Thread.sleep(1000);
-        stopWatch.stop();
-        logger.info(String.valueOf(stopWatch.getTime()));
-    }
+  @Test
+  public void baseTest() throws InterruptedException {
+    StopWatch stopWatch = StopWatch.createStarted();
+    Thread.sleep(1000);
+    stopWatch.stop();
+    logger.info(String.valueOf(stopWatch.getTime()));
+  }
 }

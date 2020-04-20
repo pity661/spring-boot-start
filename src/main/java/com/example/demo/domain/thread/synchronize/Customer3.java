@@ -8,12 +8,12 @@ package com.example.demo.domain.thread.synchronize;
  */
 public class Customer3 implements Runnable {
 
-    @Override
-    public void run() {
-        try {
-            Method.div();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+  @Override
+  public void run() {
+    try {
+      Method.div();
+    } catch (InterruptedException e) {
+      e.printStackTrace();
     }
+  }
 }
