@@ -1,6 +1,6 @@
 #####
 # config_document:
-  # https://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
+# https://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
 #####
 
 spring:
@@ -11,7 +11,7 @@ spring:
   redis:
     host: 127.0.0.1
     port: 6379
-# java -jar xxx.jar --spring.profiles.active={profile} 切换不同的环境配置
+  # java -jar xxx.jar --spring.profiles.active={profile} 切换不同的环境配置
   profiles:
     active: dev
     include: redis,prop-test,data-plural #,data

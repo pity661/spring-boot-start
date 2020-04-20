@@ -11,28 +11,28 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class ConstructProperties {
-  private String name;
-  private String realName;
+    private String name;
+    private String realName;
 
-  public ConstructProperties(
-      @Value("${demo.prop.name}") String name, @Value("${demo.prop.real_name}") String realName) {
-    this.name = name;
-    this.realName = realName;
-  }
+    public ConstructProperties(
+            @Value("${demo.prop.name}") String name, @Value("${demo.prop.real_name}") String realName) {
+        this.name = name;
+        this.realName = realName;
+    }
 
-  public String getName() {
-    return name;
-  }
+    public String getName() {
+        return name;
+    }
 
-  public void setName(String name) {
-    this.name = name;
-  }
+    public void setName(String name) {
+        this.name = name;
+    }
 
-  public String getRealName() {
-    return realName;
-  }
+    public String getRealName() {
+        return realName;
+    }
 
-  public void setRealName(String realName) {
-    this.realName = realName;
-  }
+    public void setRealName(String realName) {
+        this.realName = realName;
+    }
 }

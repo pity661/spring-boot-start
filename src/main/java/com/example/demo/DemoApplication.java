@@ -11,12 +11,12 @@ import org.springframework.cache.annotation.EnableCaching;
 // xxx config-2
 @EnableConfigurationProperties({ConfigProperties.class})
 public class DemoApplication {
-  public static void main(String[] args) {
-    // 如果不想配置被命令行修改
-    SpringApplication application = new SpringApplication(DemoApplication.class);
-    application.setAddCommandLineProperties(false);
-    application.run(args);
-    //    application.run(DemoApplication.class,"--debug");
-    // SpringApplication.run(DemoApplication.class, args);
-  }
+    public static void main(String[] args) {
+        // 如果不想配置被命令行修改
+        SpringApplication application = new SpringApplication(DemoApplication.class);
+        application.setAddCommandLineProperties(false);
+        application.run(args);
+        //    application.run(DemoApplication.class,"--debug");
+        // SpringApplication.run(DemoApplication.class, args);
+    }
 }

@@ -2,7 +2,7 @@
 <configuration>
 
     <property name="loggingLevel" value="INFO"/>
-<!--    <property name="loggingRoot" value="${PWD}"/>-->
+    <!--    <property name="loggingRoot" value="${PWD}"/>-->
 
     <!--<springProperty scope="context" name="loggingLevel" source="app.config.log.level"/>-->
     <springProperty scope="context" name="loggingRoot" source="logging.path"/>
@@ -44,19 +44,19 @@
     </appender>
 
     <!--打印日志会先进到这个拦截器,additivity设置为false就不会到下一级root中-->
-    <logger name="com.example.demo" additivity="false"  level="INFO">
+    <logger name="com.example.demo" additivity="false" level="INFO">
         <appender-ref ref="bizLog"/>
         <appender-ref ref="STDOUT-APPENDER"/>
     </logger>
 
     <!--<logger name="com.panda.sdk" additivity="false"  level="INFO">-->
-        <!--<appender-ref ref="bizLog"/>-->
-        <!--<appender-ref ref="STDOUT-APPENDER"/>-->
+    <!--<appender-ref ref="bizLog"/>-->
+    <!--<appender-ref ref="STDOUT-APPENDER"/>-->
     <!--</logger>-->
 
     <root level="${loggingLevel}">
-        <appender-ref ref="bizLog" />
-        <appender-ref ref="STDOUT-APPENDER" />
+        <appender-ref ref="bizLog"/>
+        <appender-ref ref="STDOUT-APPENDER"/>
     </root>
 
 </configuration>

@@ -12,7 +12,7 @@ spring:
     show-sql: true
     database: postgresql
     # 根据实体创建表，数据库引擎
-#    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    #    database-platform: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
       # update 仅更新，如果表中有数据不会丢失
       # create 若存在先drop再创建，表中数据会丢失

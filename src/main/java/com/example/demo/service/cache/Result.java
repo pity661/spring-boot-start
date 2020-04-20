@@ -7,18 +7,18 @@ package com.example.demo.service.cache;
  * @create: 2019-09-09 11:33
  */
 public class Result {
-  private String value;
+    private String value;
 
-  public String getValue() {
-    return value;
-  }
+    public String getValue() {
+        return value;
+    }
 
-  public void setValue(String value) {
-    this.value = value;
-  }
+    public void setValue(String value) {
+        this.value = value;
+    }
 
-  @Override
-  public String toString() {
-    return "Result{" + "value='" + value + '\'' + '}';
-  }
+    @Override
+    public String toString() {
+        return "Result{" + "value='" + value + '\'' + '}';
+    }
 }

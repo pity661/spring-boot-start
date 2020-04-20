@@ -21,7 +21,6 @@ task runFormat(type: JavaExec) {
 }
 
 
-
 repositories {
     mavenCentral()
 }

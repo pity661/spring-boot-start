@@ -13,15 +13,15 @@ import org.springframework.util.StopWatch;
  */
 public class SpringStopWatchTest {
 
-  private Logger logger = LoggerFactory.getLogger(this.getClass());
+    private Logger logger = LoggerFactory.getLogger(this.getClass());
 
-  @Test
-  public void baseTest() throws InterruptedException {
-    StopWatch stopWatch = new StopWatch();
-    stopWatch.start();
-    Thread.sleep(1000);
-    stopWatch.stop();
-    logger.info(String.valueOf(stopWatch.getTotalTimeMillis()));
-    logger.info(String.valueOf(stopWatch.getTotalTimeSeconds()));
-  }
+    @Test
+    public void baseTest() throws InterruptedException {
+        StopWatch stopWatch = new StopWatch();
+        stopWatch.start();
+        Thread.sleep(1000);
+        stopWatch.stop();
+        logger.info(String.valueOf(stopWatch.getTotalTimeMillis()));
+        logger.info(String.valueOf(stopWatch.getTotalTimeSeconds()));
+    }
 }
